@@ -1,0 +1,51 @@
+body {
+  background: #815b2a;
+}
+
+.chess {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chess__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chess__frame {
+  border-top: 5vh solid #634441;
+  border-right: 5vh solid #533937;
+  border-bottom: 5vh solid #634441;
+  border-left: 5vh solid #533937;
+}
+.cells {
+  border: 1vh solid #e7cdc1;
+}
+.cells__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cells__cell {
+  position: relative;
+  width: calc(60vh / 8);
+  height: calc(60vh / 8);
+  background: #744d48;
+}
+.cells__cell_dama::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: url("../img/dama.png") 0 / cover no-repeat;
+  z-index: 1;
+}
+.cells__first-color>:nth-child(odd) {
+  background: #c7c2ad;
+}
+.cells__second-color>:nth-child(even) {
+  background: #c7c2ad;
+}
